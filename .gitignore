@@ -1,3 +1,8 @@
 /vendor/
 /.phpunit.cache/
+.phpunit.result.cache
 .DS_Store
+/reference/
+/app/*/vendor/
+/app/*/.phpunit.cache/
+/app/*/.phpunit.result.cache
