@@ -1,0 +1,21 @@
+{
+    "name": "tdd-vibe-coding/xunit",
+    "description": "TDD本 Part 2: xUnit Example の写経",
+    "type": "project",
+    "require": {
+        "php": "^8.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xunit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xunit\\Tests\\": "tests/"
+        }
+    }
+}
