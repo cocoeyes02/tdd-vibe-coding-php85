@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Money\Tests;
 
-use Money\Dollar;
-use Money\Franc;
 use Money\Money;
 use PHPUnit\Framework\TestCase;
 
@@ -15,16 +13,16 @@ class DollarTest extends TestCase
     {
         $five = Money::dollar(5);
         $product = $five->times(2);
-        $this->assertTrue((new Dollar(10))->equals($product));
+        $this->assertTrue(Money::dollar(10)->equals($product));
         $product = $five->times(3);
-        $this->assertTrue((new Dollar(15))->equals($product));
+        $this->assertTrue(Money::dollar(15)->equals($product));
     }
 
     public function testEquality(): void
     {
-        $this->assertTrue((new Dollar(5))->equals(new Dollar(5)));
-        $this->assertFalse((new Dollar(5))->equals(new Dollar(6)));
-        $this->assertFalse((new Franc(5))->equals(new Dollar(5)));
+        $this->assertTrue(Money::dollar(5)->equals(Money::dollar(5)));
+        $this->assertFalse(Money::dollar(5)->equals(Money::dollar(6)));
+        $this->assertFalse(Money::franc(5)->equals(Money::dollar(5)));
     }
 
     public function testCurrency(): void
