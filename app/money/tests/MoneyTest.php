@@ -7,15 +7,13 @@ namespace Money\Tests;
 use Money\Money;
 use PHPUnit\Framework\TestCase;
 
-class DollarTest extends TestCase
+class MoneyTest extends TestCase
 {
     public function testMultiplication(): void
     {
         $five = Money::dollar(5);
-        $product = $five->times(2);
-        $this->assertTrue(Money::dollar(10)->equals($product));
-        $product = $five->times(3);
-        $this->assertTrue(Money::dollar(15)->equals($product));
+        $this->assertTrue(Money::dollar(10)->equals($five->times(2)));
+        $this->assertTrue(Money::dollar(15)->equals($five->times(3)));
     }
 
     public function testEquality(): void
