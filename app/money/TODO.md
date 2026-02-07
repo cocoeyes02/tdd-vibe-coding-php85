@@ -13,3 +13,7 @@ TDD本のToDoリストを管理するファイル。
 - [ ] hashCode()
 - [ ] nullとの等価性
 - [ ] 他のオブジェクトとの等価性
+- [x] 5 CHF × 2 = 10 CHF
+- [ ] DollarとFrancの重複
+- [ ] equalsの一般化
+- [ ] timesの一般化
