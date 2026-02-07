@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Money\Tests;
 
 use Money\Dollar;
+use Money\Franc;
 use PHPUnit\Framework\TestCase;
 
 class DollarTest extends TestCase
@@ -22,5 +23,6 @@ class DollarTest extends TestCase
     {
         $this->assertTrue((new Dollar(5))->equals(new Dollar(5)));
         $this->assertFalse((new Dollar(5))->equals(new Dollar(6)));
+        $this->assertFalse((new Franc(5))->equals(new Dollar(5)));
     }
 }
