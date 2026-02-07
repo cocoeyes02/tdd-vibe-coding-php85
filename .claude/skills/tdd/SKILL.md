@@ -35,15 +35,19 @@ TDD写経では以下の粒度でコミットする：
 
 | フェーズ | コミットタイミング | prefixの例 |
 |----------|-------------------|------------|
-| Red → Green | テストが通った時点 | `test:` |
+| Red | 失敗するテストを書いた時点 | `test:` |
+| Green | テストが通った時点 | `test:` |
 | Refactor | リファクタリング完了時点 | `refactor:` |
 | その他 | TODO更新、クリーンアップなど | `chore:` |
 
 ### コミット例
 
 ```
-# Red → Green
-test: $5 × 2 = $10 のテストを追加（Red → Green）
+# Red
+test: times()が新しいDollarを返すテストを追加（Red）
+
+# Green
+test: times()が新しいDollarを返すように実装（Green）
 
 # Refactor
 refactor: Dollarクラスの重複を除去
