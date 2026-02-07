@@ -21,6 +21,7 @@ Kent Beck著「テスト駆動開発（Test-Driven Development）」をPHP 8.5�
 - Slash Command
 - skills
 - sub agent
+- git worktree + sub agentsによる並列開発
 - hook
 - MCP
 - claude.md / rules
