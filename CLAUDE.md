@@ -116,6 +116,11 @@ feat(xunit): 第N章 章タイトル
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 ```
 
+### PR作成時の注意
+
+- `mcp__github__create_pull_request` の `body` パラメータには `\n` エスケープシーケンスを使わず、実際の改行を含めること
+- PR作成前に必ず `/php-review` を実行し、結果をPRにコメントすること
+
 ## テスト実行
 
 - テストは `make test` で実行する
