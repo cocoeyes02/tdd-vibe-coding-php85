@@ -9,3 +9,7 @@ TDD本のToDoリストを管理するファイル。
 - [ ] amountをprivateにする
 - [x] Dollarの副作用どうする？
 - [ ] Moneyの丸め処理どうする？
+- [x] equals()
+- [ ] hashCode()
+- [ ] nullとの等価性
+- [ ] 他のオブジェクトとの等価性
