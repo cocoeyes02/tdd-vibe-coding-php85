@@ -26,4 +26,10 @@ class DollarTest extends TestCase
         $this->assertFalse((new Dollar(5))->equals(new Dollar(6)));
         $this->assertFalse((new Franc(5))->equals(new Dollar(5)));
     }
+
+    public function testCurrency(): void
+    {
+        $this->assertSame('USD', Money::dollar(1)->currency());
+        $this->assertSame('CHF', Money::franc(1)->currency());
+    }
 }
