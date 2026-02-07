@@ -16,7 +16,7 @@ TDD本のToDoリストを管理するファイル。
 - [x] 5 CHF × 2 = 10 CHF
 - [ ] DollarとFrancの重複
 - [x] equalsの一般化
-- [ ] timesの一般化
+- [x] timesの一般化
 - [x] DollarとFrancを比較する
 - [x] 通貨?
 - [x] ファクトリメソッドでサブクラスを隠蔽
