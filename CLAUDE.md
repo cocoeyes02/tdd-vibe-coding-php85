@@ -79,6 +79,14 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 ```
 
+## テスト実行
+
+- テストは `make test` で実行する
+- `./vendor/bin/phpunit` を直接実行しない
+- 各アプリケーションのディレクトリで実行する
+  - `app/money/` - Money Example
+  - `app/xunit/` - xUnit Example
+
 ## セッション記録
 
 issueに都度セッション記録をまとめる。以下の内容を含める：
