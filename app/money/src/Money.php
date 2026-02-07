@@ -27,12 +27,12 @@ class Money
 
     public static function dollar(int $amount): Money
     {
-        return new Dollar($amount);
+        return new Money($amount, 'USD');
     }
 
     public static function franc(int $amount): Money
     {
-        return new Franc($amount);
+        return new Money($amount, 'CHF');
     }
 
     public function equals(Money $money): bool

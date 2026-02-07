@@ -9,6 +9,15 @@
             "command": "if echo \"$TOOL_INPUT\" | grep -qE 'git push.*(origin main|main:|origin/main)'; then echo 'エラー: mainブランチへの直接pushは禁止されています。PRを作成してください。' >&2; exit 1; fi"
           }
         ]
+      },
+      {
+        "matcher": "mcp__github__create_pull_request",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '注意: PR作成前に /php-review を実行しましたか？レビュー結果はPRコメントに追加してください。' >&2"
+          }
+        ]
       }
     ]
   }

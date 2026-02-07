@@ -6,3 +6,4 @@
 /app/*/vendor/
 /app/*/.phpunit.cache/
 /app/*/.phpunit.result.cache
+/.worktree-*/
