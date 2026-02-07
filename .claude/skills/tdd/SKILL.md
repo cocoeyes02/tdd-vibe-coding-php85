@@ -70,6 +70,7 @@ chore: TODO.mdを更新
 3. **常にテストが通る状態を維持** - リファクタリング中も頻繁にテスト実行
 4. **TODOリストを活用** - 本に出てくるTODOリストをTODO.mdで管理
 5. **テストは必ず `make test` で実行** - `./vendor/bin/phpunit` を直接実行しない
+6. **PR作成前に必ず `/php-review` を実行** - レビューなしでPRを作成しない
 
 ## PHPUnit + JUnit の対応
 
