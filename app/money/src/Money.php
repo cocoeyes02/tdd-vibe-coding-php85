@@ -7,6 +7,12 @@ namespace Money;
 class Money
 {
     protected int $amount;
+    protected string $currency;
+
+    public function currency(): string
+    {
+        return $this->currency;
+    }
 
     public static function dollar(int $amount): Dollar
     {
