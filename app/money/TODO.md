@@ -17,3 +17,4 @@ TDD本のToDoリストを管理するファイル。
 - [ ] DollarとFrancの重複
 - [x] equalsの一般化
 - [ ] timesの一般化
+- [x] DollarとFrancを比較する
