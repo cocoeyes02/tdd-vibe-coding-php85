@@ -14,7 +14,7 @@ TDD本のToDoリストを管理するファイル。
 - [ ] nullとの等価性
 - [ ] 他のオブジェクトとの等価性
 - [x] 5 CHF × 2 = 10 CHF
-- [ ] DollarとFrancの重複
+- [x] DollarとFrancの重複
 - [x] equalsの一般化
 - [x] timesの一般化
 - [x] DollarとFrancを比較する
