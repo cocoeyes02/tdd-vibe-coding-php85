@@ -6,13 +6,14 @@ namespace Money\Tests;
 
 use Money\Dollar;
 use Money\Franc;
+use Money\Money;
 use PHPUnit\Framework\TestCase;
 
 class DollarTest extends TestCase
 {
     public function testMultiplication(): void
     {
-        $five = new Dollar(5);
+        $five = Money::dollar(5);
         $product = $five->times(2);
         $this->assertTrue((new Dollar(10))->equals($product));
         $product = $five->times(3);
