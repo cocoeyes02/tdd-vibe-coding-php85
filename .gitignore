@@ -7,3 +7,5 @@
 /app/*/.phpunit.cache/
 /app/*/.phpunit.result.cache
 /.worktree-*/
+package-lock.json
+.claude/settings.local.json
