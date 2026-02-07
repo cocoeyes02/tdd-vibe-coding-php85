@@ -81,3 +81,41 @@ cd app/money && make test
 # app/xunit の場合
 cd app/xunit && make test
 ```
+
+## PR作成ワークフロー
+
+TDD写経が完了したら、以下の手順でPRを作成する：
+
+### 1. PHPレビューを実行
+
+```
+/php-review app/money
+```
+
+### 2. PR作成
+
+- ブランチをpush
+- PRを作成（`mcp__github__create_pull_request`を使用）
+
+### 3. レビュー結果をPRにコメント
+
+- PHPレビュー結果をPRのコメントとして追加（`mcp__github__add_issue_comment`を使用）
+- descriptionの更新はMCPツールで非対応のため、コメントで代用
+
+### PR作成の流れまとめ
+
+```
+Red → commit
+  ↓
+Green → commit
+  ↓
+Refactor → commit（必要な場合）
+  ↓
+TODO.md更新 → commit
+  ↓
+/php-review 実行
+  ↓
+PR作成
+  ↓
+レビュー結果をPRにコメント
+```
