@@ -42,44 +42,73 @@ See-also: https://github.com/cocoeyes02/tdd-vibe-coding-php85/issues/XX
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 ```
 
-## issue、PR、コメント
+## TDD写経用テンプレート
 
-- **日本語**で記述する
-- 末尾に `Co-Authored-By: モデル名 <noreply@anthropic.com>` を追加する
+TDD本の写経では、以下の統一フォーマットを使用する。
 
-### issueの例
+### Issueタイトル
+
 ```
-タイトル: ユーザー認証機能を実装する
+TDD本 Part 1: Money Example - 第N章 章タイトル
+TDD本 Part 2: xUnit Example - 第N章 章タイトル
+```
 
-## 目的
-ユーザーがログイン・ログアウトできるようにする。
+例:
+- `TDD本 Part 1: Money Example - 第7章 りんごとみかん`
+- `TDD本 Part 1: Money Example - 第10章 timesの一般化`
+- `TDD本 Part 2: xUnit Example - 第18章 xUnitへの第一歩`
 
-## やること
-- [ ] ログイン画面の作成
-- [ ] 認証ロジックの実装
-- [ ] ログアウト機能の実装
+### Issue本文
+
+```markdown
+## 概要
+
+この章で何をするかの1-2行説明。
+
+## 現状
+
+変更前のコードや状態（リファクタリング章など必要な場合のみ）。
+
+## タスク
+
+- [ ] 具体的なタスク1
+- [ ] 具体的なタスク2
+- [ ] TODO.mdを更新
 
 ## 参考
-- 関連ドキュメントや参考URLなど
+
+- TDD本 第N章「原題」
 
 ---
 
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 ```
 
-### PRの例
-```
-タイトル: feat: ユーザー認証機能を実装
+### PRタイトル
 
+```
+feat(money): 第N章 章タイトル
+feat(xunit): 第N章 章タイトル
+```
+
+例:
+- `feat(money): 第10章 timesの一般化`
+- `feat(xunit): 第18章 xUnitへの第一歩`
+
+### PR本文
+
+```markdown
 ## 概要
-ログイン・ログアウト機能を実装しました。
+
+1-2行でこの章で何をしたか。
 
 ## 変更内容
-- ログイン画面を追加
-- 認証ロジックを実装
-- ログアウト機能を追加
+
+- 変更点1
+- 変更点2
 
 ## 関連Issue
+
 - #XX
 
 ---
@@ -97,7 +126,27 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 
 ## セッション記録
 
-issueに都度セッション記録をまとめる。以下の内容を含める：
-- 実施内容
-- 学んだこと
-- 成果物
+issueに都度セッション記録をまとめる。以下のフォーマットを使用する：
+
+```markdown
+## セッション記録
+
+### 実施内容
+
+1. 具体的な作業1
+2. 具体的な作業2
+
+### 学んだこと
+
+- 学び1
+- 学び2
+
+### 成果物
+
+- PR: #XX
+- 完了したTODO: 「XXX」
+
+---
+
+Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
+```
