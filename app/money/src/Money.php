@@ -9,17 +9,28 @@ class Money
     protected int $amount;
     protected string $currency;
 
+    public function __construct(int $amount, string $currency)
+    {
+        $this->amount = $amount;
+        $this->currency = $currency;
+    }
+
     public function currency(): string
     {
         return $this->currency;
     }
 
-    public static function dollar(int $amount): Dollar
+    public function times(int $multiplier): Money
+    {
+        return new Money($this->amount * $multiplier, $this->currency);
+    }
+
+    public static function dollar(int $amount): Money
     {
         return new Dollar($amount);
     }
 
-    public static function franc(int $amount): Franc
+    public static function franc(int $amount): Money
     {
         return new Franc($amount);
     }
@@ -27,6 +38,6 @@ class Money
     public function equals(Money $money): bool
     {
         return $this->amount === $money->amount
-            && get_class($this) === get_class($money);
+            && $this->currency() === $money->currency();
     }
 }
