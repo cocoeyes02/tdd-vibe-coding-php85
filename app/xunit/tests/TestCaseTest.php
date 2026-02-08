@@ -15,4 +15,11 @@ class TestCaseTest extends TestCase
         $test->run();
         $this->assertTrue($test->wasRun);
     }
+
+    public function testSetUp(): void
+    {
+        $test = new WasRun('testMethod');
+        $test->run();
+        $this->assertSame('setUp ', $test->log);
+    }
 }
