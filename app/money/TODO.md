@@ -5,6 +5,7 @@ TDD本のToDoリストを管理するファイル。
 ## TODO
 
 - [ ] $5 + 10 CHF = $10（レートが2:1の場合）
+- [x] $5 + $5 = $10
 - [x] $5 × 2 = $10
 - [x] amountをprivateにする
 - [x] Dollarの副作用どうする？
@@ -20,3 +21,7 @@ TDD本のToDoリストを管理するファイル。
 - [x] DollarとFrancを比較する
 - [x] 通貨?
 - [x] ファクトリメソッドでサブクラスを隠蔽
+- [x] $5 + $5がMoneyを返す
+- [ ] Bank.reduce(Money)
+- [ ] Moneyを変換して換算を行う
+- [ ] Reduce(Bank, String)
