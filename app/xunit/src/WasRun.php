@@ -17,5 +17,6 @@ class WasRun extends TestCase
     public function testMethod(): void
     {
         $this->wasRun = true;
+        $this->log .= 'testMethod ';
     }
 }
