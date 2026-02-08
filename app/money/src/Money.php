@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Money;
 
-class Money
+class Money implements Expression
 {
-    protected int $amount;
+    public int $amount;
     protected string $currency;
 
     public function __construct(int $amount, string $currency)
@@ -33,6 +33,16 @@ class Money
     public static function franc(int $amount): Money
     {
         return new Money($amount, 'CHF');
+    }
+
+    public function plus(Money $addend): Expression
+    {
+        return new Sum($this, $addend);
+    }
+
+    public function reduce(string $to): Money
+    {
+        return $this;
     }
 
     public function equals(Money $money): bool
