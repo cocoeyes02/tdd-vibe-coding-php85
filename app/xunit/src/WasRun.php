@@ -6,7 +6,6 @@ namespace Xunit;
 
 class WasRun extends TestCase
 {
-    public bool $wasRun = false;
     public string $log = '';
 
     public function setUp(): void
@@ -16,7 +15,6 @@ class WasRun extends TestCase
 
     public function testMethod(): void
     {
-        $this->wasRun = true;
         $this->log .= 'testMethod ';
     }
 }

@@ -9,13 +9,6 @@ use Xunit\WasRun;
 
 class TestCaseTest extends TestCase
 {
-    public function testRunning(): void
-    {
-        $test = new WasRun('testMethod');
-        $test->run();
-        $this->assertTrue($test->wasRun);
-    }
-
     public function testSetUp(): void
     {
         $test = new WasRun('testMethod');
