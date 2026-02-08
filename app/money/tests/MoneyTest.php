@@ -39,4 +39,12 @@ class MoneyTest extends TestCase
         $reduced = $bank->reduce($sum, 'USD');
         $this->assertTrue(Money::dollar(10)->equals($reduced));
     }
+
+    public function testReduceSum(): void
+    {
+        $sum = new Sum(Money::dollar(3), Money::dollar(4));
+        $bank = new Bank();
+        $result = $bank->reduce($sum, 'USD');
+        $this->assertTrue(Money::dollar(7)->equals($result));
+    }
 }
