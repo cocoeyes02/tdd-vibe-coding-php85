@@ -13,6 +13,6 @@ class TestCaseTest extends TestCase
     {
         $test = new WasRun('testMethod');
         $test->run();
-        $this->assertSame('setUp testMethod ', $test->log);
+        $this->assertSame('setUp testMethod tearDown ', $test->log);
     }
 }
