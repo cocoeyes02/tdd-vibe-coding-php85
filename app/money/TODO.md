@@ -22,6 +22,6 @@ TDD本のToDoリストを管理するファイル。
 - [x] 通貨?
 - [x] ファクトリメソッドでサブクラスを隠蔽
 - [x] $5 + $5がMoneyを返す
-- [ ] Bank.reduce(Money)
-- [ ] Moneyを変換して換算を行う
-- [ ] Reduce(Bank, String)
+- [x] Bank.reduce(Money)
+- [x] Moneyを変換して換算を行う
+- [x] Reduce(Bank, String)
