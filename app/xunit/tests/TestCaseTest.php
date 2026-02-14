@@ -15,4 +15,11 @@ class TestCaseTest extends TestCase
         $test->run();
         $this->assertSame('setUp testMethod tearDown ', $test->log);
     }
+
+    public function testResult(): void
+    {
+        $test = new WasRun('testMethod');
+        $result = $test->run();
+        $this->assertSame('1 run, 0 failed', $result->summary());
+    }
 }
