@@ -22,4 +22,9 @@ class WasRun extends TestCase
     {
         $this->log .= 'testMethod ';
     }
+
+    public function testBrokenMethod(): void
+    {
+        throw new \RuntimeException('Broken');
+    }
 }
