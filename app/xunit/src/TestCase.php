@@ -31,8 +31,9 @@ class TestCase
             $this->$method();
         } catch (\Throwable $e) {
             $result->testFailed();
+        } finally {
+            $this->tearDown();
         }
-        $this->tearDown();
         return $result;
     }
 }
