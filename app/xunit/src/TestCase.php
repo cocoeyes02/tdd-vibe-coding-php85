@@ -21,9 +21,11 @@ class TestCase
     {
     }
 
-    public function run(): TestResult
+    public function run(?TestResult $result = null): TestResult
     {
-        $result = new TestResult();
+        if ($result === null) {
+            $result = new TestResult();
+        }
         $result->testStarted();
         $this->setUp();
         try {
@@ -31,8 +33,9 @@ class TestCase
             $this->$method();
         } catch (\Throwable $e) {
             $result->testFailed();
+        } finally {
+            $this->tearDown();
         }
-        $this->tearDown();
         return $result;
     }
 }
