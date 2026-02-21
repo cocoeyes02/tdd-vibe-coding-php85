@@ -36,4 +36,13 @@ class TestCaseTest extends TestCase
         $test->run();
         $this->assertSame('setUp tearDown ', $test->log);
     }
+
+    public function testSuite(): void
+    {
+        $suite = new \Xunit\TestSuite();
+        $suite->add(new WasRun('testMethod'));
+        $suite->add(new WasRun('testBrokenMethod'));
+        $result = $suite->run();
+        $this->assertSame('2 run, 1 failed', $result->summary());
+    }
 }
