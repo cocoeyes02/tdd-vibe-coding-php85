@@ -29,4 +29,11 @@ class TestCaseTest extends TestCase
         $result = $test->run();
         $this->assertSame('1 run, 1 failed', $result->summary());
     }
+
+    public function testFailedResultFormatting(): void
+    {
+        $test = new WasRun('testBrokenMethod');
+        $test->run();
+        $this->assertSame('setUp tearDown ', $test->log);
+    }
 }
