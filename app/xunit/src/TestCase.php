@@ -21,9 +21,11 @@ class TestCase
     {
     }
 
-    public function run(): TestResult
+    public function run(?TestResult $result = null): TestResult
     {
-        $result = new TestResult();
+        if ($result === null) {
+            $result = new TestResult();
+        }
         $result->testStarted();
         $this->setUp();
         try {
